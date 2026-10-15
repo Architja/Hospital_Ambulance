@@ -7,7 +7,14 @@ from fastapi.testclient import TestClient
 from api import app
 
 client = TestClient(app)
-DATA = Path(__file__).parent.parent / "data"
+def _find_data_dir():
+    here = Path(__file__).parent
+    for d in (here, here / "data", here.parent / "data"):
+        if (d / "ambulances_pool_synthetic.json").exists():
+            return d
+    return here
+
+DATA = _find_data_dir()
 AMB = json.loads((DATA / "ambulances_pool_synthetic.json").read_text())
 HOS = json.loads((DATA / "hospitals_pool_synthetic.json").read_text())
 PICK_A = lambda a: {k: a[k] for k in ("id", "category", "available")}

@@ -4,7 +4,7 @@ import json, random
 from pathlib import Path
 random.seed(7)
 LAT, LNG = 22.7196, 75.8577   # same patient point as the synthetic cases file
-OUT = Path(__file__).parent / "data"
+OUT = Path(__file__).parent / "data" if (Path(__file__).parent / "data").is_dir() else Path(__file__).parent
 
 def near(s=0.05):
     return round(LAT + random.uniform(-s, s), 5), round(LNG + random.uniform(-s, s), 5)

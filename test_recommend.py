@@ -7,7 +7,14 @@ import pytest
 from recommender import recommend, haversine, TABLE
 from rules import load_rules, lookup, TRIAGE
 
-DATA = Path(__file__).parent.parent / "data"
+def _find_data_dir():
+    here = Path(__file__).parent
+    for d in (here, here / "data", here.parent / "data"):
+        if (d / "ujala_synthetic_recommendation_cases.csv").exists():
+            return d
+    return here
+
+DATA = _find_data_dir()
 CASES = pd.read_csv(DATA / "ujala_synthetic_recommendation_cases.csv")
 
 
