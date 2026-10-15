@@ -1,0 +1,13 @@
+emergency_type,ambulance_category,hospital_category,demo_reason,input_status,is_synthetic
+cardiac,ALS,cardiac_capable_emergency_hospital,Demo mapping: cardiac symptoms may require advanced prehospital support and a hospital with cardiac emergency capability.,valid,True
+accident_trauma,ALS,trauma_capable_emergency_hospital,Demo mapping: significant trauma may require advanced support and trauma-capable emergency services.,valid,True
+stroke,ALS,stroke_capable_emergency_hospital,Demo mapping: suspected stroke requires urgent assessment at a facility able to evaluate stroke symptoms.,valid,True
+maternity,BLS,maternity_emergency_hospital,Demo mapping only: actual ambulance level depends on the patient's condition and local protocols.,valid,True
+breathing,ALS,emergency_hospital_with_respiratory_support,Demo mapping: breathing emergencies require urgent assessment; actual transport capability must be confirmed.,valid,True
+burns,ALS,burns_capable_emergency_hospital,Demo mapping: serious burns may require advanced support and a facility able to assess and treat burns.,valid,True
+general,BLS,general_emergency_hospital,Default demo mapping for a general emergency; triage and local protocols determine actual care.,valid,True
+unknown,REQUIRES_TRIAGE,nearest_verified_emergency_service,"Safe fallback: emergency type is unknown, so do not infer a specific ambulance level or specialty.",unknown_type,True
+,REQUIRES_TRIAGE,nearest_verified_emergency_service,Safe fallback: emergency type is missing; request clarification while directing the user to emergency services if urgent.,incomplete,True
+cardiac,ALS,cardiac_capable_emergency_hospital,Synthetic duplicate scenario for duplicate-row validation testing.,valid_duplicate_test,True
+maternity,NEONATAL_OR_MATERNITY_SPECIALIST,maternity_and_neonatal_capable_hospital,Demo mapping: use only when maternity/newborn context is specified; confirm real capabilities before ranking.,valid_variant,True
+critical_care_transport,ICU,hospital_with_critical_care,Synthetic edge case for critical-care transport; not one of the seven required emergency types.,valid_variant,True

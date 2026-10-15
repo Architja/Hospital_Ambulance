@@ -1,0 +1,233 @@
+{
+  "1_cardiac_normal": {
+    "request": {
+      "emergencyType": "cardiac",
+      "patientLat": 22.7196,
+      "patientLng": 75.8577,
+      "ambulances": [
+        {
+          "id": "A1",
+          "category": "ALS",
+          "available": true
+        },
+        {
+          "id": "A2",
+          "category": "ALS",
+          "available": false
+        },
+        {
+          "id": "A3",
+          "category": "BLS",
+          "available": true
+        },
+        {
+          "id": "A4",
+          "category": "ICU",
+          "available": true
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "H1",
+          "name": "Demo Heart Institute",
+          "category": "cardiac_capable_emergency_hospital",
+          "distanceKm": 2.1,
+          "freeBeds": 6,
+          "pmjay": true
+        },
+        {
+          "id": "H2",
+          "name": "Demo Cardiac Clinic",
+          "category": "cardiac_capable_emergency_hospital",
+          "distanceKm": 4.5,
+          "freeBeds": 1,
+          "pmjay": false
+        },
+        {
+          "id": "H3",
+          "name": "Demo Full Cardiac",
+          "category": "cardiac_capable_emergency_hospital",
+          "distanceKm": 1.0,
+          "freeBeds": 0,
+          "pmjay": true
+        },
+        {
+          "id": "H4",
+          "name": "Demo General South",
+          "category": "general_emergency_hospital",
+          "distanceKm": 1.2,
+          "freeBeds": 8,
+          "pmjay": true
+        }
+      ]
+    },
+    "status": 200,
+    "response": {
+      "ambulanceType": "ALS",
+      "hospitalCategory": "cardiac_capable_emergency_hospital",
+      "topHospitals": [
+        {
+          "id": "H1",
+          "name": "Demo Heart Institute",
+          "distanceKm": 2.1,
+          "freeBeds": 6,
+          "pmjay": true,
+          "score": 0.7667
+        },
+        {
+          "id": "H2",
+          "name": "Demo Cardiac Clinic",
+          "distanceKm": 4.5,
+          "freeBeds": 1,
+          "pmjay": false,
+          "score": 0.05
+        }
+      ],
+      "reason": "Demo mapping: cardiac symptoms may require advanced prehospital support and a hospital with cardiac emergency capability. 1 compatible available ambulance(s). (Demo logic, not clinical advice.)"
+    }
+  },
+  "2_unknown_type_safe_fallback": {
+    "request": {
+      "emergencyType": "banana",
+      "patientLat": 22.7196,
+      "patientLng": 75.8577,
+      "ambulances": [
+        {
+          "id": "A1",
+          "category": "ALS",
+          "available": true
+        },
+        {
+          "id": "A2",
+          "category": "ALS",
+          "available": false
+        },
+        {
+          "id": "A3",
+          "category": "BLS",
+          "available": true
+        },
+        {
+          "id": "A4",
+          "category": "ICU",
+          "available": true
+        }
+      ],
+      "hospitals": [
+        {
+          "id": "H1",
+          "name": "Demo Heart Institute",
+          "category": "cardiac_capable_emergency_hospital",
+          "distanceKm": 2.1,
+          "freeBeds": 6,
+          "pmjay": true
+        },
+        {
+          "id": "H2",
+          "name": "Demo Cardiac Clinic",
+          "category": "cardiac_capable_emergency_hospital",
+          "distanceKm": 4.5,
+          "freeBeds": 1,
+          "pmjay": false
+        },
+        {
+          "id": "H3",
+          "name": "Demo Full Cardiac",
+          "category": "cardiac_capable_emergency_hospital",
+          "distanceKm": 1.0,
+          "freeBeds": 0,
+          "pmjay": true
+        },
+        {
+          "id": "H4",
+          "name": "Demo General South",
+          "category": "general_emergency_hospital",
+          "distanceKm": 1.2,
+          "freeBeds": 8,
+          "pmjay": true
+        }
+      ]
+    },
+    "status": 200,
+    "response": {
+      "ambulanceType": "REQUIRES_TRIAGE",
+      "hospitalCategory": "nearest_verified_emergency_service",
+      "topHospitals": [
+        {
+          "id": "H4",
+          "name": "Demo General South",
+          "distanceKm": 1.2,
+          "freeBeds": 8,
+          "pmjay": true,
+          "score": 0.8667
+        },
+        {
+          "id": "H1",
+          "name": "Demo Heart Institute",
+          "distanceKm": 2.1,
+          "freeBeds": 6,
+          "pmjay": true,
+          "score": 0.6917
+        },
+        {
+          "id": "H2",
+          "name": "Demo Cardiac Clinic",
+          "distanceKm": 4.5,
+          "freeBeds": 1,
+          "pmjay": false,
+          "score": 0.0375
+        }
+      ],
+      "reason": "Safe fallback: emergency type is unknown, so do not infer a specific ambulance level or specialty. No ambulance level inferred; triage needed. (Demo logic, not clinical advice.)"
+    }
+  },
+  "3_no_candidates_safe_no_match": {
+    "request": {
+      "emergencyType": "stroke",
+      "patientLat": 22.7196,
+      "patientLng": 75.8577,
+      "ambulances": [],
+      "hospitals": []
+    },
+    "status": 200,
+    "response": {
+      "ambulanceType": "ALS",
+      "hospitalCategory": "stroke_capable_emergency_hospital",
+      "topHospitals": [],
+      "reason": "Demo mapping: suspected stroke requires urgent assessment at a facility able to evaluate stroke symptoms. No compatible available ambulance found. No hospital found for this category. (Demo logic, not clinical advice.)"
+    }
+  },
+  "4_invalid_latitude_422": {
+    "request": {
+      "emergencyType": "cardiac",
+      "patientLat": 500,
+      "patientLng": 75.8577
+    },
+    "status": 422,
+    "response": {
+      "error": "validation_error",
+      "details": [
+        {
+          "field": "patientLat",
+          "message": "Input should be less than or equal to 90"
+        }
+      ]
+    }
+  },
+  "5_missing_emergency_type_422": {
+    "request": {
+      "patientLat": 22.7196,
+      "patientLng": 75.8577
+    },
+    "status": 422,
+    "response": {
+      "error": "validation_error",
+      "details": [
+        {
+          "field": "emergencyType",
+          "message": "Field required"
+        }
+      ]
+    }
+  }
+}

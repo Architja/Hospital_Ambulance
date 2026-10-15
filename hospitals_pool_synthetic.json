@@ -1,0 +1,155 @@
+[
+  {
+    "id": "HOSPP001",
+    "name": "Demo Heart Institute",
+    "category": "cardiac_capable_emergency_hospital",
+    "lat": 22.70198,
+    "lng": 75.82278,
+    "freeBeds": 6,
+    "pmjay": true
+  },
+  {
+    "id": "HOSPP002",
+    "name": "Demo Cardiac Clinic",
+    "category": "cardiac_capable_emergency_hospital",
+    "lat": 22.73469,
+    "lng": 75.81494,
+    "freeBeds": 1,
+    "pmjay": false
+  },
+  {
+    "id": "HOSPP003",
+    "name": "Demo Multispeciality Cardiac",
+    "category": "cardiac_capable_emergency_hospital",
+    "lat": 22.72319,
+    "lng": 75.84427,
+    "freeBeds": 0,
+    "pmjay": true
+  },
+  {
+    "id": "HOSPP004",
+    "name": "Demo Trauma Centre",
+    "category": "trauma_capable_emergency_hospital",
+    "lat": 22.6754,
+    "lng": 75.85844,
+    "freeBeds": 4,
+    "pmjay": true
+  },
+  {
+    "id": "HOSPP005",
+    "name": "Demo Emergency Care",
+    "category": "trauma_capable_emergency_hospital",
+    "lat": 22.67335,
+    "lng": 75.85106,
+    "freeBeds": 8,
+    "pmjay": false
+  },
+  {
+    "id": "HOSPP006",
+    "name": "Demo Neuro Hospital",
+    "category": "stroke_capable_emergency_hospital",
+    "lat": 22.67659,
+    "lng": 75.81677,
+    "freeBeds": 2,
+    "pmjay": true
+  },
+  {
+    "id": "HOSPP007",
+    "name": "Demo Stroke Unit",
+    "category": "stroke_capable_emergency_hospital",
+    "lat": 22.71205,
+    "lng": 75.89039,
+    "freeBeds": 5,
+    "pmjay": false
+  },
+  {
+    "id": "HOSPP008",
+    "name": "Demo Mother Hospital",
+    "category": "maternity_emergency_hospital",
+    "lat": 22.68198,
+    "lng": 75.83002,
+    "freeBeds": 9,
+    "pmjay": true
+  },
+  {
+    "id": "HOSPP009",
+    "name": "Demo Maternity Home",
+    "category": "maternity_emergency_hospital",
+    "lat": 22.73234,
+    "lng": 75.90247,
+    "freeBeds": 3,
+    "pmjay": false
+  },
+  {
+    "id": "HOSPP010",
+    "name": "Demo Chest Care",
+    "category": "emergency_hospital_with_respiratory_support",
+    "lat": 22.72731,
+    "lng": 75.84737,
+    "freeBeds": 5,
+    "pmjay": false
+  },
+  {
+    "id": "HOSPP011",
+    "name": "Demo Lung Institute",
+    "category": "emergency_hospital_with_respiratory_support",
+    "lat": 22.76723,
+    "lng": 75.81236,
+    "freeBeds": 7,
+    "pmjay": true
+  },
+  {
+    "id": "HOSPP012",
+    "name": "Demo Burns Unit",
+    "category": "burns_capable_emergency_hospital",
+    "lat": 22.75545,
+    "lng": 75.83666,
+    "freeBeds": 3,
+    "pmjay": true
+  },
+  {
+    "id": "HOSPP013",
+    "name": "Demo General North",
+    "category": "general_emergency_hospital",
+    "lat": 22.68403,
+    "lng": 75.81948,
+    "freeBeds": 14,
+    "pmjay": true
+  },
+  {
+    "id": "HOSPP014",
+    "name": "Demo General South",
+    "category": "general_emergency_hospital",
+    "lat": 22.70045,
+    "lng": 75.88931,
+    "freeBeds": 0,
+    "pmjay": true
+  },
+  {
+    "id": "HOSPP015",
+    "name": "Demo Community Centre",
+    "category": "general_emergency_hospital",
+    "lat": 22.68767,
+    "lng": 75.86586,
+    "freeBeds": 11,
+    "pmjay": false
+  },
+  {
+    "id": "HOSPP016",
+    "name": "Demo Mother & Newborn Hospital",
+    "category": "maternity_and_neonatal_capable_hospital",
+    "lat": 22.73349,
+    "lng": 75.84494,
+    "freeBeds": 2,
+    "pmjay": true
+  },
+  {
+    "id": "HOSPP017",
+    "name": "Demo Critical Care Hospital",
+    "category": "hospital_with_critical_care",
+    "lat": 22.72437,
+    "lng": 75.81398,
+    "freeBeds": 3,
+    "pmjay": true
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "AMBP001",
+    "category": "ALS",
+    "available": true,
+    "lat": 22.67556,
+    "lng": 75.8283
+  },
+  {
+    "id": "AMBP002",
+    "category": "ALS",
+    "available": true,
+    "lat": 22.73764,
+    "lng": 75.85046
+  },
+  {
+    "id": "AMBP003",
+    "category": "ALS",
+    "available": false,
+    "lat": 22.70101,
+    "lng": 75.86626
+  },
+  {
+    "id": "AMBP004",
+    "category": "ALS",
+    "available": true,
+    "lat": 22.71492,
+    "lng": 75.83768
+  },
+  {
+    "id": "AMBP005",
+    "category": "BLS",
+    "available": true,
+    "lat": 22.74904,
+    "lng": 75.8776
+  },
+  {
+    "id": "AMBP006",
+    "category": "BLS",
+    "available": true,
+    "lat": 22.69401,
+    "lng": 75.86514
+  },
+  {
+    "id": "AMBP007",
+    "category": "BLS",
+    "available": false,
+    "lat": 22.72212,
+    "lng": 75.89521
+  },
+  {
+    "id": "AMBP008",
+    "category": "BLS",
+    "available": true,
+    "lat": 22.74254,
+    "lng": 75.83649
+  },
+  {
+    "id": "AMBP009",
+    "category": "ICU",
+    "available": true,
+    "lat": 22.76762,
+    "lng": 75.81951
+  },
+  {
+    "id": "AMBP010",
+    "category": "ICU",
+    "available": false,
+    "lat": 22.71141,
+    "lng": 75.88341
+  },
+  {
+    "id": "AMBP011",
+    "category": "NEONATAL_OR_MATERNITY_SPECIALIST",
+    "available": true,
+    "lat": 22.6848,
+    "lng": 75.8566
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "w_distance": 0.5,
+  "w_beds": 0.3,
+  "w_pmjay": 0.2,
+  "top_n": 3,
+  "exclude_full_hospitals": true
+}
